@@ -10,7 +10,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
 SAMPLE_SPREADSHEET_ID = '1gVho0RgY0Dw6A2X_DNwdHQ_Bw5a5SWfDfnbLscnNMx0'
-SAMPLE_RANGE_NAME = 'Class Data!A2:E'
+SAMPLE_RANGE_NAME = 'A1:D'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -45,10 +45,10 @@ def main():
     if not values:
         print('No data found.')
     else:
-        print('Name, Major:')
+        print('col 0, col 1, col 2, col 3')
         for row in values:
             # Print columns A and E, which correspond to indices 0 and 4.
-            print('%s, %s' % (row[0], row[4]))
+            print('%s, %s, %s, %s' % (row[0], row[1], row[2], row[3]))
 
 if __name__ == '__main__':
     main()
